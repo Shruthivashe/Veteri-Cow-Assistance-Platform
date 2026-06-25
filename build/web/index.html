@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veteri Cow Assist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #081F3D; /* Deep navy blue from image */
+  color: #FFD700; /* Bright gold/yellow text */
+  overflow-x: hidden;
+}
+
+/* Background Slideshow */
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade 50s infinite;
+  opacity: 0;
+}
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 5s; }
+.slideshow img:nth-child(3) { animation-delay: 10s; }
+.slideshow img:nth-child(4) { animation-delay: 15s; }
+.slideshow img:nth-child(5) { animation-delay: 20s; }
+.slideshow img:nth-child(6) { animation-delay: 25s; }
+.slideshow img:nth-child(7) { animation-delay: 30s; }
+.slideshow img:nth-child(8) { animation-delay: 35s; }
+.slideshow img:nth-child(9) { animation-delay: 40s; }
+.slideshow img:nth-child(10) { animation-delay: 45s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 2rem;
+  background:#111827; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container img {
+  height: 45px;
+  margin-right: 10px;
+}
+.logo-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #FFFFFF; /* Bright White text */
+}
+
+.nav-buttons a {
+  padding: 0.6rem 1.4rem;
+  margin-left: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: #00FF7F; /* Bright green links */
+  border: 1px solid #00FF7F;
+}
+.nav-buttons a:hover {
+  background: #00FF7F;
+  color: #081F3D;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  background: rgba(8, 31, 61, 0.8); /* Semi-transparent navy */
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 800px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  color: #FFD700;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #F3F4F6; /* card title color */
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card {
+  background: rgba(0, 0, 0, 0.4); /* Dark transparent */
+  border: 1px solid rgba(255, 215, 0, 0.4); /* Gold border */
+  padding: 2rem;
+  border-radius: 18px;
+  width: 260px;
+  text-align: center;
+  color: #F3F4F6; /* color white */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+.card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #FFD700;
+}
+.card h3 a {
+  color: #FFD700;
+  text-decoration: none;
+}
+.card p {
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  background: #111827; /* Transparent footer */
+  color: #F9FAFB; /* Dark black text */
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Slideshow -->
+  <div class="slideshow">
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+    <img src="img3.jpg" alt="">
+    <img src="img4.jpg" alt="">
+    <img src="img5.jpg" alt="">
+    <img src="img6.jpg" alt="">
+    <img src="img7.jpg" alt="">
+    <img src="img8.jpg" alt="">
+    <img src="img9.jpg" alt="">
+    <img src="img10.png" alt="">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Veteri Cow Assist Logo">
+      <span class="logo-text">Veteri Cow Assist</span>
+    </div>
+    <div class="nav-buttons">
+      <a href="user_login.jsp" class="login">Login</a>
+      <a href="user_signup.jsp" class="signup">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1> Cattle Care Platform</h1>
+      <p>Revolutionize your livestock health with intelligent veterinary tools, pharmacy integration, and appointment scheduling — all in one place.</p>
+      <div class="card-container">
+        <div class="card">
+          <div class="icon">📅</div>
+          <h3><a href="SA.jsp">Schedule Appointment</a></h3>
+          <p>Plan visits, set reminders, and ensure timely care for your cattle.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3><a href="dashboard.jsp">Dashboard</a></h3>
+          <p>Monitor treatments, prescriptions, and animal health records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Veteri Cow Assist — Mini Project.
+  </footer>
+
+</body>
+</html>
