@@ -101,28 +101,7 @@ git clone https://github.com/Shruthivashe/Veteri-Cow-Assistance-Platform.git
     └── view_health.jsp
 ```
 
-## 👥 Contributors
 
-Thanks to everyone who has contributed to this project:
-
-<p align="left">
-<a href="https://github.com/Shruthivashe" title="Shruthivashe"><img src="https://avatars.githubusercontent.com/u/191700017?v=4&s=64" width="64" height="64" alt="Shruthivashe" style="border-radius:50%" /></a>
-</p>
-
-[See the full list of contributors →](https://github.com/Shruthivashe/Veteri-Cow-Assistance-Platform/graphs/contributors)
-
-## 👥 Contributing
-
-Contributions are welcome! Here's the standard flow:
-
-1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/Shruthivashe/Veteri-Cow-Assistance-Platform.git`
-3. **Branch**: `git checkout -b feature/your-feature`
-4. **Commit**: `git commit -m 'feat: add some feature'`
-5. **Push**: `git push origin feature/your-feature`
-6. **Open** a pull request
-
-Please follow the existing code style and include tests for new behavior where applicable.
 
 ## 📜 License
 
